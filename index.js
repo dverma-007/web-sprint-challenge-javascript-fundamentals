@@ -16,7 +16,7 @@ function myFunction() {
 myFunction();
 
 //🚀🚀🚀 ⬇️ 📝 Explanation ⬇️ 📝 🚀🚀🚀: 
-// Nested functions are functions within another function.  In this case, "nestedFunction" is the inner function or a child function to the outer function or parent function, "myFunction".  Child functions can access variable and parameters of the Parent function.  For this reason, nestedFunction can access the variable internal which is in the myFunction.    
+// Nested function is functions within another function.  In this case, "nestedFunction" is the inner function or a child function to the outer function or parent function, "myFunction".  Child functions can access variable and parameters of the Parent function.  For this reason, nestedFunction can access the variable internal which is in the parent function, myFunction.    
 
 
 
@@ -31,12 +31,12 @@ For example, `summation(4)` should return 10 because 1+2+3+4 is 10. Note, you ma
 function summation(number1) {
     /*Your Code Here*/
     let sum = 0
-    for (let i = 0; i <= number1; i++, sum += i) {
+    for (let i = 0; i <= number1; i++) {
         sum = sum + i;
     }
     return sum
 }
-console.log(summation(10));
+console.log(summation(4));
 
 
 // 🦁🦁🦁 Topic 2: ADVANCED Array Methods 🦁🦁🦁
@@ -159,9 +159,9 @@ function greeting(first_name, last_name) {
 
 // 🦁🦁🦁 Step 3: Check your work by un-commenting the following calls to consume(): 🦁🦁🦁 
 // ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️
-// console.log(consume(2, 2, add)); // 4
-// console.log(consume(10, 16, multiply)); // 160
-// console.log(consume("Mary", "Poppins", greeting)); // Hello Mary Poppins, nice to meet you!
+console.log(consume(2, 2, add)); // 4
+console.log(consume(10, 16, multiply)); // 160
+console.log(consume("Mary", "Poppins", greeting)); // Hello Mary Poppins, nice to meet you!
 
 // 🐴🐴🐴 Topic 3: Prototypes 🐴🐴🐴 //
 //🐴🐴🐴 Task: You are to build a cuboid maker that can return values for a cuboid's volume or surface area. Cuboids are similar to cubes but do not have even sides. Follow the steps in order to accomplish this challenge. 🐴🐴🐴
@@ -182,9 +182,6 @@ function CuboidMaker(attr) {
 CuboidMaker.prototype.volume = function() {
     return this.length * this.width * this.height;
 }
-
-
-
 
 /* 🐴🐴🐴 Step 3: Surface Area Method 🐴🐴🐴
   Create another method called surfaceArea using CuboidMaker's prototype that returns the surface area of a given cuboid's length, width, and height. 
@@ -210,8 +207,8 @@ const cuboid = new CuboidMaker({
 
 // 🐴🐴🐴 Test your volume and surfaceArea methods by uncommenting the logs below: 🐴🐴🐴
 // ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️
-// console.log(cuboid.volume()); // 100
-// console.log(cuboid.surfaceArea()); // 130
+console.log(cuboid.volume()); // 100
+console.log(cuboid.surfaceArea()); // 130
 
 
 // 🦄🦄🦄 Topic 4: Classes 🦄🦄🦄 //
@@ -222,21 +219,15 @@ class CuboidMakerTwo {
             this.width = attributes.width,
             this.height = attributes.height
     }
-}
-class volume extends CubioMakerTwo {
-    constructor(length, width, height) {
-        super(length, width, height);
+    volume() {
         return this.length * this.width * this.height;
     }
-}
-class surfaceArea extends CubioMakerTwo {
-    constructor(length, width, height) {
-        super(length, width, height);
-        return this.length * this.width + this.length * this.height + this.width * this.height;
+    surfaceArea() {
+        return 2 * (this.length * this.width + this.length * this.height + this.width * this.height);
     }
 }
 
-const cuboidTwo = ({
+const cuboidTwo = new CuboidMakerTwo({
     length: 4,
     width: 5,
     height: 5,
@@ -245,8 +236,8 @@ const cuboidTwo = ({
 
 
 //🦄🦄🦄 Test your volume and surfaceArea methods by uncommenting the logs below: 🦄🦄🦄
-// console.log(cuboidTwo.volume()); // 100
-// console.log(cuboidTwo.surfaceArea()); // 130
+console.log(cuboidTwo.volume()); // 100
+console.log(cuboidTwo.surfaceArea()); // 130
 
 
 

@@ -25,14 +25,18 @@ Demonstrate your understanding of this week's concepts by answering the followin
 Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read.
 
 1. Explain the differences between `.map`, `.reduce` and `.filter` and describe a use case for each. 
+.map, .reduce and .filter are all advanced array methods.  
+.map - returns a new array automatically and needs a return keyword.  Whaever comes after the return is automatically pushed to the new array (don't need to use the .push when using .map).  Use case is when you want a new array without changing the old array.  
+.reduce - returns a single value, takes two arguments (accumulator, item) and have to assign an initial value of either 0 or 1 depending if you're going to be adding or multiplying the numbers.  Use case is when you want to add or multiply something together.  
+.filter - returns a new array automatically based on something that could be true or false.  It needs a return statement also.  Use case is if you need to narrow down a list into a new array.  
 
-2. Explain the difference between a callback and a higher order function.
+2. Explain the difference between a callback and a higher order function.  Callbck functions are passed into other functions as arguments.  Higher Order functions receive other functions as parameters.  
 
-3. Explain what a closure is.
+3. Explain what a closure is. Closures give us abilityt o put functions together.  Allows us to utilize code that has been identified elsewhere tht acn be used later.  Closure happens when the innder function reahcehs out to it's outer function to grab a value defined in the outer function. 
 
-4. Describe the four principles of the 'this' keyword.
+4. Describe the four principles of the 'this' keyword. Window Binding, Implicit Binding, Explicit Binding and New Binding.  
 
-5. Why do we need super() in an extended class?
+5. Why do we need super() in an extended class? Super tells child to inherit attributes from the Parent.  
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
 
